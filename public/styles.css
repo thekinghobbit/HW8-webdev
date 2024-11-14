@@ -1,0 +1,168 @@
+/* Reset some default styles */
+body, h1, form, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Comic Sans for that weird look */
+    background-color: #ffcccb; /* Light red background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Background color animations for different weather conditions */
+@keyframes clearWeather {
+    0% { background-color: #f7d794; }
+    50% { background-color: #fce38a; }
+    100% { background-color: #f7d794; }
+}
+
+@keyframes cloudyWeather {
+    0% { background-color: #d1ccc0; }
+    50% { background-color: #a4b0be; }
+    100% { background-color: #d1ccc0; }
+}
+
+@keyframes rainyWeather {
+    0% { background-color: #778beb; }
+    50% { background-color: #546de5; }
+    100% { background-color: #778beb; }
+}
+
+@keyframes snowyWeather {
+    0% { background-color: #c7ecee; }
+    50% { background-color: #dff9fb; }
+    100% { background-color: #c7ecee; }
+}
+
+@keyframes thunderstormWeather {
+    0% { background-color: #f5cd79; }
+    50% { background-color: #f6e58d; }
+    100% { background-color: #f5cd79; }
+}
+
+/* Styling for the header */
+h1 {
+    margin-bottom: 20px;
+    font-size: 3em; /* Large font size */
+    color: #ff00ff; /* Magenta color */
+    text-shadow: 2px 2px #00ffff; /* Cyan shadow */
+    animation: textBounce 2s infinite; /* Bouncing text animation */
+}
+
+/* Bouncing text animation */
+@keyframes textBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Styling for the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px dashed #0000ff; /* Dashed blue border */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #0000ff; /* Blue shadow */
+    transform: rotate(-5deg); /* Slight rotation */
+}
+
+label {
+    margin: 5px 0;
+    font-size: 1.2em; /* Larger font size */
+    color: #ff0000; /* Red color */
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #00ff00; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    width: 200px;
+    background-color: #ffffe0; /* Light yellow background */
+    transform: skewX(-10deg); /* Skewed input fields */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff69b4; /* Hot pink background */
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em; /* Larger font size */
+    transform: scale(1.1); /* Slightly larger button */
+    transition: transform 0.2s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #ff1493; /* Deep pink on hover */
+    transform: scale(1.2); /* Larger on hover */
+}
+
+/* Styling for the weather display */
+#weather-display {
+    text-align: center;
+    margin-top: 20px;
+    border: 2px dotted #ff4500; /* Dotted orange border */
+    padding: 20px;
+    background-color: #f0f8ff; /* Alice blue background */
+    box-shadow: 0 0 10px #ff4500; /* Orange shadow */
+    transform: rotate(5deg); /* Slight rotation */
+}
+
+#weather-display p {
+    margin: 10px 0;
+    font-size: 1.5em; /* Larger font size */
+    color: #00008b; /* Dark blue color */
+    animation: textWobble 1s infinite; /* Wobbling text animation */
+}
+
+/* Wobbling text animation */
+@keyframes textWobble {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+/* Styling for the error message */
+#error-message {
+    color: red;
+    margin-top: 20px;
+    font-size: 1.5em; /* Larger font size */
+    animation: textShake 0.5s infinite; /* Shaking text animation */
+}
+
+/* Shaking text animation */
+@keyframes textShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Ensure the SVG icon is displayed below all text and centered */
+#weather-icon {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation: iconSpin 5s linear infinite; /* Spinning icon animation */
+}
+
+/* Spinning icon animation */
+@keyframes iconSpin {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
